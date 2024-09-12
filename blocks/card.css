@@ -13,9 +13,10 @@ justify-content: space-between;
 }
 
 .card__title{
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  color:rgba(33,33,33,1);
 }
 
 .card__like-button{
@@ -42,7 +43,6 @@ justify-content: space-between;
 }
 
 .card__title{
-  color:rgba(33,33,33,1);
   font-weight: 500px;
   font-size: 16px;
   line-height: 16px;
