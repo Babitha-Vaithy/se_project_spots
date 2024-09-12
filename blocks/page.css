@@ -1,9 +1,19 @@
+body, h1, h2, h3, p, div, span, img, main, section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .page{
     background-color: #fcf5e5;
     min-height:100vh;
+    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
+
 .page__section{
-  max-width: 1280px;
+   max-width: 1280px;
     margin: 0 auto;
+    width: 100%;
 }
+

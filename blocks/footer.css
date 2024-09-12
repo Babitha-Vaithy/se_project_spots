@@ -1,12 +1,21 @@
 .footer{
-  padding:60px 588px;
-
+  padding:60px 0px;
+  color: rgba(33,33,33,0.7);
 }
 
-.footer__title{
-    width: 104px;
-    height:16px;
-    display: flex;
-    justify-content: center;
-    margin:0px;
+.footer.page__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+  .footer__title {
+    white-space: nowrap;
+    text-align: center;
+    width: auto;
+    margin: 0;
 }
