@@ -36,6 +36,7 @@ margin:0 0 114px;
 font-weight:500;
 font-size: 16px;
 line-height: 16px;
+color: rgba(33, 33, 33, 0.7);
 text-overflow: ellipsis;
 overflow: hidden;
 display: -webkit-box;
@@ -52,6 +53,7 @@ line-height: 16px;
 border-style: none;
 background: none;
 text-align: start;
+color: rgba(33, 33, 33, 1);
 }
 
 .profile__add-button{
