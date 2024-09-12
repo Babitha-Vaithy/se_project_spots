@@ -20,7 +20,7 @@ This project is made so all the elements are displayed correctly on popular scre
   All images are displayed based on the dimensions size and it will appear with the title and button. 
 
 **Deployment**
-THis project is deployed using Github
+This project is deployed using Github
 
-Github link:
+Github link: https://babitha-vaithy.github.io/se_project_spots/
 
