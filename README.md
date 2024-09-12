@@ -22,5 +22,5 @@ This project is made so all the elements are displayed correctly on popular scre
 **Deployment**
 This project is deployed using Github
 
-Github link: https://babitha-vaithy.github.io/se_project_spots/
+Deployment Link: https://babitha-vaithy.github.io/se_project_spots/
 
