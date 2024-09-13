@@ -34,7 +34,7 @@ color: rgba(33,33,33,1);
 }
 
 .profile__description{
-margin:0 0 114px;
+margin:0;
 font-weight:500;
 font-size: 16px;
 line-height: 16px;
@@ -48,15 +48,21 @@ max-width: 420px;
 }
 
 .profile__edit-button{
-margin-top:auto;
+margin-top:114px;
 font-weight:500;
 font-size: 16px;
 line-height: 16px;
 border-style: none;
 background: none;
 text-align: start;
-color: rgba(33, 33, 33, 1);
+color: rgb(33, 33, 33,1);
 opacity: 70%;
+transition-duration: 0.4s;
+}
+
+.profile__edit-button:hover{
+cursor: pointer;
+opacity: 100%;
 }
 
 .profile__add-button{
@@ -69,12 +75,17 @@ opacity: 70%;
   border-radius:8px;
   height:52px;
   display: flex;
-  justify-content: space-between;
   gap:5px;
   font-weight:500;
   font-size: 16px;
   line-height: 16px;
   border: none;
+  transition-duration: 0.4s;
+}
+
+.profile__add-button:hover{
+background-color: rgba(33,33,33,0.8);
+cursor: pointer;
 }
 
 @media screen and (max-width:627px) {
@@ -133,6 +144,7 @@ max-width: 288px;
     border-style: none;
     background: none;
     text-align: center;
+    margin-top:0;
 }
 .profile__add-button{
   width: 100%;

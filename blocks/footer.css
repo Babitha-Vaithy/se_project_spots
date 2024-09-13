@@ -3,7 +3,7 @@
   color: rgba(33,33,33,0.7);
 }
 
-.footer.page__section {
+.footer__page__section {
   display: flex;
   justify-content: center;
   align-items: center;
