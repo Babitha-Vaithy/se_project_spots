@@ -10,8 +10,8 @@
 .profile__avatar{
   height:190px;
   width: 190px;
-margin-right: 20px;
-border-radius: 9px;
+  margin-right: 20px;
+  border-radius: 8px;
 }
 
 .profile__column{
@@ -27,8 +27,10 @@ line-height: 32px;
 text-overflow: ellipsis;
 overflow: hidden;
 display: -webkit-box;
+-webkit-line-clamp: 3;
 -webkit-box-orient: vertical;
 max-width: 420px;
+color: rgba(33,33,33,1);
 }
 
 .profile__description{
@@ -54,6 +56,7 @@ border-style: none;
 background: none;
 text-align: start;
 color: rgba(33, 33, 33, 1);
+opacity: 70%;
 }
 
 .profile__add-button{
@@ -61,7 +64,7 @@ color: rgba(33, 33, 33, 1);
   background-color:#212121;
   color: #FCF5E5;
   padding: 18px 32px 18px 32px;
-  margin-top:138px;
+  margin-top:auto;
   margin-bottom:20px;
   border-radius:8px;
   height:52px;
@@ -71,6 +74,7 @@ color: rgba(33, 33, 33, 1);
   font-weight:500;
   font-size: 16px;
   line-height: 16px;
+  border: none;
 }
 
 @media screen and (max-width:627px) {
@@ -132,14 +136,7 @@ max-width: 288px;
 }
 .profile__add-button{
   width: 100%;
-  margin:0 0 0 0;
   justify-content: center;
 }
 }
 
-@media screen and (max-width:1280) {
- .profile{
-  flex-direction: column;
-  align-items: flex-start;
-}
-}

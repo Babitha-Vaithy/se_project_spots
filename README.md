@@ -24,3 +24,4 @@ This project is deployed using Github
 
 Deployment Link: https://babitha-vaithy.github.io/se_project_spots/
 
+Video Link: https://drive.google.com/file/d/1Rn1dvFrHKTw2oBcszJRgWEtOBC-CnT1P/view?usp=drive_link
