@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 12px 0 36px;
 }
 
 .card__title{
@@ -21,8 +22,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 413px;
-  margin-top: 12px;
-  margin-bottom: 36px;
+  margin:0;
 
 }
 
@@ -37,24 +37,21 @@
 }
 
 .card__like-button:hover{
-  border: 2px;
-  cursor: pointer;
-  border-color: rgba(33,33,33,1);
   opacity: 100%;
-
 }
+
 @media screen and (max-width:627px) {
   .card__image{
     height: 288px;
 }
 
 .card__content{
-  margin: 12px 0 20px;
+  margin: 12px 0 2px;
 }
 
 .card{
   width: 288px;
-  margin-bottom: -70px;
+  margin-bottom: 20px;
 }
 
 .card__title{
