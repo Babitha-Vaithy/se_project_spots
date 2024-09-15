@@ -2,8 +2,6 @@
     display: flex;
     padding: 34px 0px 20px;
     border-bottom: 1px rgba(33,33,33,0.4) solid;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -50,7 +48,7 @@ max-width: 420px;
 }
 
 .profile__edit-button{
-margin-top: 114px;
+margin-top: auto;
 font-weight:500;
 font-size: 16px;
 line-height: 16px;
@@ -72,7 +70,6 @@ opacity: 100%;
   color: #FCF5E5;
   padding: 18px 32px 18px 32px;
   margin-top:auto;
-  margin-bottom:20px;
   border-radius:8px;
   height:52px;
   display: flex;
