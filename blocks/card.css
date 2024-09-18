@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 0 36px;
+  margin: 12px 0 0;
 }
 
 .card__title {
@@ -51,7 +51,6 @@
 
   .card {
     width: 288px;
-    margin-bottom: 20px;
   }
 
   .card__title {

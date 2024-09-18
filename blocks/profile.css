@@ -108,16 +108,12 @@
     width: 288px;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 500;
     max-width: 288px;
   }
 
   .profile__description {
     margin: 0 0 32px;
     width: 288px;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 500;
     max-width: 288px;
   }
 
