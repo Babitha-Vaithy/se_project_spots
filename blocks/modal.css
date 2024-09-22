@@ -1,0 +1,120 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  padding: 0 16px;
+}
+
+.model__opened {
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 50px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/close-button.svg);
+  border: none;
+  background-color: transparent;
+  opacity: 40%;
+  padding: 0 0 0 0;
+}
+
+.modal__close-button:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.modal__title {
+  width: 169px;
+  height: 32px;
+  margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  color: rgba(33, 33, 33, 1);
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.modal__input {
+  border-color: rgba(33, 33, 33, 0.4);
+  border-radius: 8px;
+  padding: 16px 12px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.modal__input:hover {
+  border-color: rgba(33, 33, 33, 1);
+  cursor: pointer;
+}
+
+.modal__submit-button {
+  width: 156px;
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(252, 244, 299, 1);
+  padding: 18px 0px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding: 0 10px;
+  }
+
+  .modal__container {
+    padding: 12px;
+  }
+  .modal__title {
+    width: 106px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0 34px;
+    padding-top: 20px;
+    padding-left: 12px;
+  }
+
+  .modal__label {
+    margin-bottom: 24px;
+  }
+
+  .modal__submit-button {
+    width: 100%;
+  }
+  .modal__close-button {
+    padding: 12px 12px 0 0;
+    right: 0px;
+  }
+}
