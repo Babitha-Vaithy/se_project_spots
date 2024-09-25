@@ -14,8 +14,12 @@
   padding: 0 16px;
 }
 
-.model__opened {
+.modal_opened {
   visibility: visible;
+}
+
+.modal_closed {
+  visibility: hidden;
 }
 
 .modal__container {
