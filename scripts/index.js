@@ -33,7 +33,7 @@ function getCardElement(data){
 
   cardNameElement.textContent = data.name;
   cardImageElement.src = data.link;
-  cardImageElement.textContent = data.name;
+  cardImageElement.alt = data.name;
   return cardElement;
 }
 
@@ -44,7 +44,7 @@ function openModal(){
 }
 
 function closeModal(){
-  editModal.classList.add("modal_closed");
+  editModal.classList.remove("modal_opened");
 }
 
 function handleEditFormSubmit(evt) {
