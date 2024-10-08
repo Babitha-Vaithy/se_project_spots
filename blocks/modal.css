@@ -30,8 +30,10 @@
 .modal__container_type_preview {
   padding: 0;
   box-sizing: unset;
-  background-color: transparent;
-  /* max-height: 80vh; */
+  background: transparent;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__image {
@@ -42,10 +44,7 @@
 }
 
 .modal__caption {
-  /* width: 135px; */
-  /* max-width: 80vw;
-  width: 100%; */
-  object-fit: contain;
+  width: fit-content;
   padding: 4px 8px;
   background-color: rgba(33, 33, 33, 1);
   border-radius: 8px;
@@ -67,6 +66,7 @@
   background-color: transparent;
   opacity: 40%;
   padding: 0 0 0 0;
+  transition: opacity 5s ease-in;
 }
 
 .modal__close-button:hover {
@@ -79,10 +79,6 @@
   top: 0;
   right: -52px;
   opacity: 1;
-}
-
-.modal__close-button_preview .card__delete-button {
-  display: none;
 }
 
 .modal__title {
