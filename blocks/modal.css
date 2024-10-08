@@ -28,7 +28,7 @@
 }
 
 .modal__container_type_preview {
-  padding: 0;
+  padding: 0 6px;
   box-sizing: unset;
   background: transparent;
   width: fit-content;
@@ -169,6 +169,7 @@
 @media screen and (max-width: 320px) {
   .modal__image {
     border-radius: 4px;
-    max-width: 100%;
+    max-width: none;
+    max-height: none;
   }
 }
