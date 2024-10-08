@@ -17,7 +17,6 @@
 .modal_opened {
   visibility: visible;
 }
-
 .modal__container {
   max-width: 730px;
   width: 100%;
@@ -26,6 +25,35 @@
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 1);
   position: relative;
+}
+
+.modal__container_type_preview {
+  padding: 0;
+  box-sizing: unset;
+  background-color: transparent;
+  /* max-height: 80vh; */
+}
+
+.modal__image {
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+}
+
+.modal__caption {
+  /* width: 135px; */
+  /* max-width: 80vw;
+  width: 100%; */
+  object-fit: contain;
+  padding: 4px 8px;
+  background-color: rgba(33, 33, 33, 1);
+  border-radius: 8px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .modal__close-button {
@@ -44,6 +72,17 @@
 .modal__close-button:hover {
   cursor: pointer;
   opacity: 100%;
+}
+
+.modal__close-button_preview {
+  background-image: url(../images/closewhite-icon.svg);
+  top: 0;
+  right: -52px;
+  opacity: 1;
+}
+
+.modal__close-button_preview .card__delete-button {
+  display: none;
 }
 
 .modal__title {
@@ -87,10 +126,13 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
+  transition: background 0.3s;
+  border: none;
 }
 
-.modal__submit-button {
+.modal__submit-button:hover {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 627px) {
