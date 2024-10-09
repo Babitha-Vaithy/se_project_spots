@@ -12,10 +12,14 @@
   justify-content: center;
   visibility: hidden;
   padding: 0 16px;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
 .modal__container {
   max-width: 730px;
@@ -67,7 +71,6 @@
   background-color: transparent;
   opacity: 40%;
   padding: 0 0 0 0;
-  transition: opacity 5s ease-in;
 }
 
 .modal__close-button:hover {
@@ -163,6 +166,11 @@
   .modal__input {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  .modal__close-button_preview {
+    top: -30px;
+    right: 0;
   }
 }
 
