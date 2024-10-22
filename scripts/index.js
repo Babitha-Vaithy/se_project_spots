@@ -45,6 +45,7 @@ const editModalDescriptionInput = editModal.querySelector(
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-button");
+const cardModalSubmitBtn = cardModal.querySelector(".modal__submit-button");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
@@ -79,8 +80,9 @@ function getCardElement(data) {
     cardsList.removeChild(cardElement);
   });
 
-  cardImageElement.addEventListener("click", () => {
+  cardImageElement.addEventListener("click", (event) => {
     openModal(previewModal);
+    addEscapeEventListener(event, previewModal);
     previewModalImage.src = data.link;
     previewModalImage.alt = data.name;
     previewModalCaption.textContent = data.name;
@@ -108,29 +110,45 @@ function handleEditFormSubmit(evt) {
   closeModal(editModal);
 }
 
+function addEscapeEventListener(event, modal) {
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal(modal);
+      document.removeEventListener("keydown", null);
+    }
+  });
+}
+
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
-
   cardsList.prepend(cardElement);
-  closeModal(cardModal);
-
   cardForm.reset();
+  disableButton(cardModalSubmitBtn);
+  closeModal(cardModal);
 }
 
-profileEditButton.addEventListener("click", () => {
+profileEditButton.addEventListener("click", (event) => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetvalidation(editModalForm, [
+    editModalNameInput,
+    editModalDescriptionInput,
+  ]);
   openModal(editModal);
+  // create a function to listen for escape event and close the modal
+  addEscapeEventListener(event, editModal);
 });
 
 closeProfileModal.addEventListener("click", () => {
   closeModal(editModal);
 });
 
-cardModalBtn.addEventListener("click", () => {
+cardModalBtn.addEventListener("click", (event) => {
   openModal(cardModal);
+  // create a function to listen for escape event and close the modal
+  addEscapeEventListener(event, cardModal);
 });
 
 cardModalCloseBtn.addEventListener("click", () => {
