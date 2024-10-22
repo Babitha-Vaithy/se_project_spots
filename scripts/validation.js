@@ -66,3 +66,12 @@ const enablevalidation = () => {
 };
 
 enablevalidation();
+
+const modalList = document.querySelectorAll(".modal");
+modalList.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target.className == "modal modal_opened") {
+      closeModal(modal);
+    }
+  });
+});

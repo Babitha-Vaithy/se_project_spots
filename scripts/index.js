@@ -137,7 +137,6 @@ profileEditButton.addEventListener("click", (event) => {
     editModalDescriptionInput,
   ]);
   openModal(editModal);
-  // create a function to listen for escape event and close the modal
   addEscapeEventListener(event, editModal);
 });
 
@@ -147,7 +146,6 @@ closeProfileModal.addEventListener("click", () => {
 
 cardModalBtn.addEventListener("click", (event) => {
   openModal(cardModal);
-  // create a function to listen for escape event and close the modal
   addEscapeEventListener(event, cardModal);
 });
 
