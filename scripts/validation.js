@@ -56,7 +56,7 @@ const setEventListener = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
-  // toggleButtonState(inputList, buttonElement, config);
+  toggleButtonState(inputList, buttonElement, config);
 
   inputList.forEach((inputEl) => {
     inputEl.addEventListener("input", function () {
@@ -74,12 +74,3 @@ const enablevalidation = (config) => {
 };
 
 enablevalidation(settings);
-
-const modalList = document.querySelectorAll(".modal");
-modalList.forEach((modal) => {
-  modal.addEventListener("click", (evt) => {
-    if (evt.target.className == "modal modal_opened") {
-      closeModal(modal);
-    }
-  });
-});
