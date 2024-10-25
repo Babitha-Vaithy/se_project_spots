@@ -112,8 +112,8 @@ function handleEditFormSubmit(evt) {
 }
 
 function handleEscape(event) {
-  const currentModal = document.querySelector(".modal_opened");
   if (event.key === "Escape") {
+    const currentModal = document.querySelector(".modal_opened");
     closeModal(currentModal);
   }
 }
@@ -125,7 +125,7 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
   cardForm.reset();
   disableButton(cardModalSubmitBtn, settings);
-  closeModal(cardModal, evt);
+  closeModal(cardModal);
 }
 
 profileEditButton.addEventListener("click", (event) => {
