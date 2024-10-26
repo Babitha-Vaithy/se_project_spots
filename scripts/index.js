@@ -108,7 +108,7 @@ function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal(editModal, evt);
+  closeModal(editModal);
 }
 
 function handleEscape(event) {
@@ -163,7 +163,7 @@ const modalList = document.querySelectorAll(".modal");
 modalList.forEach((modal) => {
   modal.addEventListener("click", (evt) => {
     if (evt.target.className == "modal modal_opened") {
-      closeModal(modal, evt);
+      closeModal(modal);
     }
   });
 });
