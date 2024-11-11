@@ -1,3 +1,29 @@
+import {
+  enablevalidation,
+  settings,
+  resetvalidation,
+} from "../scripts/validation.js";
+import "../pages/index.css";
+
+// Import the image
+import stepsSrc1 from "../images/avatar.jpg";
+import stepsSrc2 from "../images/logo.svg";
+import stepsSrc3 from "../images/pencil.svg";
+import stepsSrc4 from "../images/plus.svg";
+
+// Select the element and set the src
+const stepsImage1 = document.getElementById("image-steps1");
+stepsImage1.src = stepsSrc1;
+
+const stepsImage2 = document.getElementById("image-steps2");
+stepsImage2.src = stepsSrc2;
+
+const stepsImage3 = document.getElementById("image-steps3");
+stepsImage3.src = stepsSrc3;
+
+const stepsImage4 = document.getElementById("image-steps4");
+stepsImage4.src = stepsSrc4;
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -167,3 +193,5 @@ modalList.forEach((modal) => {
     }
   });
 });
+
+enablevalidation(settings);

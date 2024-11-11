@@ -6,7 +6,6 @@
     <meta name="description" content="" />
     <meta name="keywords" content="HTML, CSS , Javascript" />
     <meta name="author" content="Babitha Vaithianathan" />
-    <link rel="stylesheet" href="pages/index.css" />
     <link rel="stylesheet" href="./scripts/index.js" type="text/Javascript">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots</title>
@@ -14,12 +13,12 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img id="image-steps2" alt="Spots logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+          id="image-steps1"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
@@ -27,19 +26,19 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
-              <img src="./images/pencil.svg" alt="Pencil icon" />
+              <img id="image-steps3" alt="Pencil icon" />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-button">
-            <img src="./images/plus.svg" alt="Plus icon" />New Post
+            <img id="image-steps4" alt="Plus icon" />New Post
           </button>
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
            <template id="card-template">
             <li class="card">
-              <img class="card__delete-button" src="./images/trash-icon.svg" alt="delete icon">
+              <img class="card__delete-button" src="../src/images/trash-icon.svg" alt="delete icon">
               <img
                 class="card__image"
                 src=""
@@ -99,7 +98,5 @@
           <p class="modal__caption"></p>
         </div>
       </div>
-      <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>
