@@ -5,14 +5,11 @@ import {
 } from "../scripts/validation.js";
 import "../pages/index.css";
 
-// Import the image
 import stepsSrc1 from "../images/avatar.jpg";
 import stepsSrc2 from "../images/logo.svg";
 import stepsSrc3 from "../images/pencil.svg";
 import stepsSrc4 from "../images/plus.svg";
-//import deleteSrc from "../images/trash-icon.svg";
 
-// Select the element and set the src
 const stepsImage1 = document.getElementById("image-steps1");
 stepsImage1.src = stepsSrc1;
 
@@ -47,7 +44,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
   {
-    name: "Mountain houses",
+    name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
   {
@@ -103,7 +100,6 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
 
-  //cardDeleteBtn.src = deleteSrc;
   cardDeleteBtn.addEventListener("click", () => {
     cardsList.removeChild(cardElement);
   });
