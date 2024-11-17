@@ -86,7 +86,7 @@
 }
 
 .modal__title {
-  max-width: 169px;
+  max-width: 100%;
   margin: 0 0 32px;
   font-weight: 500;
   font-size: 32px;
