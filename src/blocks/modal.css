@@ -41,6 +41,18 @@
   flex-direction: column;
 }
 
+.modal__container_type_avatar {
+  width: 730px;
+  border-radius: 8px;
+  padding: 32px 50px 32px 50px;
+}
+
+.modal__container_type_delete {
+  width: 630px;
+  border-radius: 8px;
+  padding: 32px 20px 32px 20px;
+}
+
 .modal__image {
   object-fit: contain;
   max-width: 80vw;
@@ -95,11 +107,22 @@
   color: rgba(33, 33, 33, 1);
 }
 
+.modal__avatar-title {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+}
+
 .modal__delete-title {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: rgba(33, 33, 33, 1);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
 }
 
 .modal__label {
@@ -107,6 +130,7 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
+  color: rgba(33, 33, 33, 0.7);
 }
 
 .modal__input {
@@ -165,6 +189,8 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .delete__btn {
@@ -194,15 +220,10 @@
   cursor: pointer;
 }
 
-.popup {
-  position: relative;
-  padding: 0;
-}
-
 .close__button {
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 0;
+  left: calc(100% + 12px);
   border: none;
   font-size: 20px;
   cursor: pointer;
