@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="modal" id="add-card-modal">
-        <div class="modal__container">
+        <div class="modal__container ">
           <button type="submit" class="modal__close-button" aria-label="Close Modal"></button>
           <h3 class="modal__title">New post</h3>
           <form name="edit profile" class="modal__form" id="add-card-form" novalidate>
@@ -120,11 +120,15 @@
 
         <div class="modal" id="delete-modal">
           <div class="modal__container">
-            <button type="submit" class="modal__close-button" aria-label="Close Modal"></button>
-            <h3 class="modal__title">Are you sure you want to delete this image?</h3>
+            <div class="popup">
+            <button type="submit" class="close__button" aria-label="Close Modal"></button>
+            <h3 class="modal__delete-title">Are you sure you want to delete this image?</h3>
             <form name="delete profile" class="modal__form" id="delete-form">
-              <button type="submit" class="modal__submit-button" id="delete-btn">Delete</button>
-              <button type="button" class="modal__submit-button" id="cancel-btn">Cancel</button>
+              <div class="button__container">
+              <button type="submit" class="delete__btn">Delete</button>
+              <button type="button" class="cancel__btn" >Cancel</button>
+            </div>
+          </div>
             </form>
           </div>
           </div>

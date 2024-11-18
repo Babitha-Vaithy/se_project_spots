@@ -55,15 +55,15 @@ export const resetvalidation = (formEl, inputList, config) => {
 const setEventListener = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
-
-  toggleButtonState(inputList, buttonElement, config);
-
-  inputList.forEach((inputEl) => {
-    inputEl.addEventListener("input", function () {
-      checkInputValidity(formEl, inputEl, config);
-      toggleButtonState(inputList, buttonElement, config);
+  if (buttonElement) {
+    toggleButtonState(inputList, buttonElement, config);
+    inputList.forEach((inputEl) => {
+      inputEl.addEventListener("input", function () {
+        checkInputValidity(formEl, inputEl, config);
+        toggleButtonState(inputList, buttonElement, config);
+      });
     });
-  });
+  }
 };
 
 export const enablevalidation = (config) => {

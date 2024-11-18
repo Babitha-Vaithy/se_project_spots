@@ -6,6 +6,7 @@ import {
 } from "../scripts/validation.js";
 import "../pages/index.css";
 import Api from "../utils/api.js";
+import { setButtonText, setDeleteButtonText } from "../utils/helper.js";
 
 import stepsSrc1 from "../images/avatar.jpg";
 import stepsSrc2 from "../images/logo.svg";
@@ -109,8 +110,8 @@ const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
 
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".modal__form");
-const deleteModalCloseBtn = deleteModal.querySelector(".modal__close-button");
-const cancelBtn = deleteModal.querySelector("#cancel-btn");
+const deleteModalCloseBtn = deleteModal.querySelector(".close__button");
+const cancelBtn = deleteModal.querySelector(".cancel__btn");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
@@ -137,14 +138,16 @@ function getCardElement(data) {
   cardNameElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
+  if (data.isLiked) {
+    cardLikeBtn.classList.toggle("card__like-button-active");
+  }
 
-  cardLikeBtn.addEventListener("click", () => {
-    cardLikeBtn.classList.toggle("card__like-button_liked");
+  cardLikeBtn.addEventListener("click", (evt) => {
+    handleLike(evt, data._id);
   });
 
-  cardDeleteBtn.addEventListener("click", (evt) => {
+  cardDeleteBtn.addEventListener("click", () => {
     handleDeleteCard(cardElement, data._id);
-    //cardsList.removeChild(cardElement);
   });
 
   cardImageElement.addEventListener("click", (event) => {
@@ -173,6 +176,10 @@ function closeModal(modal) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
+
+  const submitBtn = evt.submitter;
+  setButtonText(submitBtn, true);
+
   api
     .editUserInfo({
       name: editModalNameInput.value,
@@ -183,7 +190,10 @@ function handleEditFormSubmit(evt) {
       profileDescription.textContent = data.about;
       closeModal(editModal);
     })
-    .catch(console.err);
+    .catch(console.err)
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
 }
 
 function handleEscape(event) {
@@ -195,6 +205,10 @@ function handleEscape(event) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
+
+  const submitBtn = evt.submitter;
+  setButtonText(submitBtn, true);
+
   api
     .addCardInfo({ name: cardNameInput.value, link: cardLinkInput.value })
     .then((data) => {
@@ -204,36 +218,62 @@ function handleAddCardSubmit(evt) {
       disableButton(cardModalSubmitBtn, settings);
       closeModal(cardModal);
     })
-    .catch(console.err);
+    .catch(console.err)
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
-  console.log(avatarLinkInput.value);
+
+  const submitBtn = evt.submitter;
+  setButtonText(submitBtn, true);
+
   api
     .editavatarInfo(avatarLinkInput.value)
     .then((data) => {
       avatarProfile.src = data.avatar;
       closeModal(avatarModal);
     })
-    .catch(console.err);
+    .catch(console.err)
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
 }
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
+
+  const deleteBtn = evt.submitter;
+  setDeleteButtonText(deleteBtn, true);
+
   api
     .deleteCard(selectedCardId)
     .then(() => {
       cardsList.removeChild(selectedCard);
       closeModal(deleteModal);
     })
-    .catch();
+    .catch()
+    .finally(() => {
+      setDeleteButtonText(deleteBtn, false);
+    });
 }
 
 function handleDeleteCard(cardElement, cardId) {
   selectedCard = cardElement;
   selectedCardId = cardId;
   openModal(deleteModal);
+}
+
+function handleLike(evt, id) {
+  const isLiked = evt.target.classList.contains("card__like-button_liked");
+  api
+    .changeLikeStatus(id, isLiked)
+    .then(() => {
+      evt.target.classList.toggle("card__like-button_liked");
+    })
+    .catch();
 }
 
 profileEditButton.addEventListener("click", (event) => {
