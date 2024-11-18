@@ -67,7 +67,6 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([cards, users]) => {
-    console.log(users);
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.append(cardElement);
